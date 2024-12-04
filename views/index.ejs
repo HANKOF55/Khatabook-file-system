@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body class="w-[100vw] h-[100vh]">
+  
+
+    <div class="footer w-100 h-[40px] border-solid border-b-2 border-gray-400 shadow-xl flex items-center">
+
+        <a href="/" class="logo font-semibold text-blue-800 ml-4 text-xl">Khatabook</a>
+
+    </div>
+
+    <div class="main w-full h-full ">
+
+        <div class="fileList font-bold flex flex-col items-start mx-4 my-4">
+    
+            <div class="header font-bold text-2xl mb-4 ml-2">
+                <h1>All Hissab Kitaab</h1>
+            </div>
+
+            <% files.forEach((file) => { %>
+                
+                <h3 class="flex items-center w-[250px] border-hidden text-white border-rounded-sm bg-[#3B82F6] my-1 py-2 px-2 rounded-xl">
+                    <%= file %>
+                    <a class="edit text-2xl hover:translate-x-2 transition duration-100 ease-in text-white px-4" href="/edit/<%= file %>">
+                        <i class="ri-arrow-right-circle-fill"></i>
+                    </a>
+                    <a class="ml-auto mr-4 delete text-red-500 flex items-center justify-center w-6 h-6 bg-white text-xl rounded-full hover:scale-110 transition duration-100 " href="/delete/<%= file %>">
+                        <i class="ri-delete-bin-line"></i>
+                    </a>
+                </h3>
+               
+            <% }) %>
+    
+            <!-- Create-Button -->
+                
+                 <div class="button">
+                    <a href="/createfile">
+                        <button class="create-button my-4 bg-white text-black hover:bg-black hover:text-white transition duration-300 ease-in-out font-semibold py-2 px-6 border-2 border-black rounded-xl ">
+                             Create a file
+                         </button>
+                    </a> 
+                 </div>
+    
+        </div>
+
+    </div>
+
+
+
+    
+</body>
+</html>

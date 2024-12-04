@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  
+
+    <div class="footer w-100 h-[40px] border-solid border-botton-2 border-gray-400 shadow-xl flex items-center">
+
+        <a href="/" class="logo font-semibold text-blue-800 ml-4 text-xl">Khatabook</a>
+
+    </div>
+
+    <form action="/update/<%= filename %>" method="post">
+        <textarea name="filedata" class="textarea border-b-2 border-solid border-black rounded-xl m-4">
+            <%= data %> 
+        </textarea>
+        <button class="submit-button my-4 bg-white text-black hover:bg-black hover:text-white transition duration-300 ease-in-out font-semibold py-2 px-6 border-2 border-black rounded-xl ">
+            submit
+        </button>
+    </form>
+
+    
+</body>
+</html>
